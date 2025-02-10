@@ -6,12 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
+    "lint": "eslint \"**/*.{js,jsx}\" --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "server": "json-server -p3003 --watch db.json"
   },
   "dependencies": {
     "axios": "^1.7.9",
+    "express-async-errors": "^3.1.1",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -20,10 +22,10 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.17.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.16",
+    "eslint": "^9.20.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.14.0",
     "json-server": "^1.0.0-beta.3",
     "vite": "^6.0.5"

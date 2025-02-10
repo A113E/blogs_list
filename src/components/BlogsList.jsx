@@ -2,16 +2,23 @@
 // Importa el componente Blog (IMPORTANTE)
 import Blog from "./Blog";
 
-const BlogsList = ({blogs, handleLikeChange, onDelete}) => (
+
+const BlogsList = ({blogs, handleLikeChange, onDelete, user}) => (
     <div>
         {blogs.map((blog)=>(
-            <Blog  key={blog.id} // Usamos el ID único del blog como clave
+            <Blog  
+            key={blog.id} // Usamos el ID único del blog como clave
             blog={blog} 
             handleLikeChange={handleLikeChange}
-            onDelete={onDelete} />
+            onDelete={onDelete} 
+            user={user}
+            />
         ))}
     </div>
-);
+)
+
+
+
 
 // Exportar el componente
 export default BlogsList

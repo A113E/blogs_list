@@ -1,2 +1,10 @@
-POST  http://localhost:3001/api/blogs
+POST http://localhost:3003/api/blogs/
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsYmVydG8iLCJpZCI6IjY3OTFhZmQxYmVhYTkzZGViNjdkNzc5ZCIsImlhdCI6MTczODI1ODA5NywiZXhwIjoxNzM4MjYxNjk3fQ.hkaTnhzlXAPCeQX_RYqvOcdkBwud5vA4C1jJJHmYKzs
+
+
+{
+    "title": "Blog for testing Authorization: USER with modification",
+    "author": "Admin5",
+    "url": "www.test"
+}

@@ -1,42 +1,8 @@
 h1 {
-  color:white;
+  color:black;
   font-style: italic;
   font-weight: bold;
   text-align: center;
 }
-.h1_1 {
-  background-color: black;
-}
-li {
-  color: black;
-  padding-top: 10px;
-  font-size: 15px;
-}
-.search {
-  color:white;
-  background-color: black;
-  font-style: italic;
-  font-weight: bold;
-  width: 250px;
-}
-.sbar {
-  border: 2px solid ;
-  width: 250px;
-}
-.formt {
-  color: white;
-  width: 250px;
-  background-color: black;
-  font-weight: bold;
-  padding-top: 10px;
-}
-.fbar {
-  border: 2px solid ;
-}
-.addb {
-  background-color: blue;
-  color: white;
-  margin-top: 10px;
-  width: 60px;
-  font-size: 15px;
-}
+
+
