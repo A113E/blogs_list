@@ -16,7 +16,7 @@ export default defineConfig({
     proxy: {
       // Redirige todas las solicitudes que comienzan con "/api".
       '/api': {
-        // Define el destino del proxy. En este caso, las solicitudes se redirigen a "http://localhost:3001".
+        // Define el destino del proxy. En este caso, las solicitudes se redirigen a "http://localhost:3003".
         target: 'http://localhost:3003',
         // Habilita el cambio del origen (origin) en las solicitudes proxied.
         // Esto puede ser necesario para evitar problemas de CORS (Cross-Origin Resource Sharing).
@@ -24,4 +24,10 @@ export default defineConfig({
       },
     }
   },
+   // Configuración para las pruebas
+   test: {
+    environment: 'jsdom', // Define el entorno como jsdom, útil para pruebas que simulan el navegador.
+    globals: true, // Habilita el uso de variables globales en las pruebas (no es necesario importar palabras clave como describe, test y expect en las pruebas.).
+    setupFiles: './testSetup.js', // Archivo de configuración para inicializar las pruebas.
+  }
 })

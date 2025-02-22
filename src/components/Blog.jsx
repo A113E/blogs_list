@@ -16,10 +16,11 @@ const Blog = ({blog, handleLikeChange, onDelete, user}) => {
   const isCreator = blog.user && user && blog.user.username === user.username
 
   return (
-    <div style={blogStyle}>
+    <div style={blogStyle} className='blog'>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div>
-          <strong>Title:</strong> {blog.title}
+        <div className='blog-summary'>
+          <strong>Title:</strong> {blog.title} <br />
+          <strong>Author:</strong> {blog.author} <br />
         </div>
         <div>
           {viewDetails ? (
@@ -31,8 +32,7 @@ const Blog = ({blog, handleLikeChange, onDelete, user}) => {
       </div>
 
       {viewDetails && (
-        <div>
-          <strong>Author:</strong> {blog.author} <br />
+        <div className='blog-details'>
           <strong>URL:</strong> {blog.url} <br />
           <strong>Likes:</strong> {blog.like}  <button onClick={() => handleLikeChange(blog.id)}>Like</button><br />
           {isCreator && ( // Mostrar el botón "Eliminar" solo si el usuario es el creador
